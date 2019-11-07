@@ -19,3 +19,5 @@ class Post(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=20)
+
+# md_path = './md_blog/TEST.md'
