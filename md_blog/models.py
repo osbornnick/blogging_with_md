@@ -25,6 +25,5 @@ class Post2(models.Model):
     title = models.CharField(max_length=255)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField("Category", related_name="posts")
 
 # md_path = './md_blog/static/TEST.md'
