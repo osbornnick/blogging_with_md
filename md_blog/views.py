@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from md_blog.models import Post
+from md_blog.models import Post, Post2
 
 
 def blog_index(request):
@@ -9,6 +9,6 @@ def blog_index(request):
 
 
 def blog_detail(request, pk):
-    post = Post.objects.get(pk=pk)
+    post = Post2.objects.get(pk=pk)
     context = {'post': post}
     return render(request, "blog_detail.html", context)
