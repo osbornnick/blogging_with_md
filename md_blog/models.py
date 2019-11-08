@@ -8,7 +8,6 @@ class Post(models.Model):
     html = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField("Category", related_name="posts")
 
     def save(self, *args, **kwargs):
         file = open(self.md_path, mode='r')
@@ -17,13 +16,13 @@ class Post(models.Model):
         super().save(*args, **kwargs)
 
 
-class Category(models.Model):
-    name = models.CharField(max_length=20)
-
-
 class Post2(models.Model):
     title = models.CharField(max_length=255)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
+    md = models.FileField(null=True)
+
+    def __str__(self):
+        return self.title
 
 # md_path = './md_blog/static/TEST.md'
