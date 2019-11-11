@@ -55,7 +55,7 @@ ROOT_URLCONF = 'rendering_md.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['rendering_md/templates/', 'md_blog/templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
