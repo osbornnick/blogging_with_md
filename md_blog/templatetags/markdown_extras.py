@@ -8,5 +8,7 @@ register = template.Library()
 
 @register.filter()
 def markdown(file):
-    output = md.markdown(file.read(), extensions=['markdown.extensions.fenced_code'])
+    decoded = file.read().decode('utf-8')
+    extensions = ['markdown.extensions.fenced_code']
+    output = md.markdown(decoded, extensions=extensions)
     return mark_safe(output)
