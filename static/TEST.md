@@ -311,4 +311,4 @@ Use the `printf()` function.
 
 ### Images
 
-![nick's logo](favicon-big.png)
+![nick's logo](http://localhost:8000/static/favicon-big.png)
